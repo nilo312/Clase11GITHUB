@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+}
+
+main .img {
+    display: flex;
+    justify-content: center;
+}
+
+main div img {
+    width: 80%;        
+}
+
+main h1 span {
+    display: block;
+}
+
+div .botones {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 0.8rem;
+}
+
+div .botones .boton {
+    background-color: #57DF7E;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+}
+
+div .botones .boton-dos {
+    padding: 0.4rem 0.8rem;
+
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    padding: 4%;
+    gap: 1rem;
+}
+
+section .card {
+    background-color: whitesmoke;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+section .card h2 {
+    margin-bottom: 1rem;
+    color: #57DF7E;
+}
+
+
+/* media query desktop */
+
+@media screen and (min-width:1024px){
+    main {
+        display: grid;
+
+        grid-template-columns: auto;
+        grid-template-rows: 1fr 0.1fr 0.1fr 0.5fr;
+        grid-template-areas: 
+        "h1 img"
+        "p-uno img"
+        "p-dos img"
+        "botones img";
+        
+    }
+    main h1 {
+        grid-area: h1;
+        text-align: center;
+    }
+
+    main .img {
+        grid-area: img;
+    }
+
+    main .p-uno {
+        grid-area: p-uno;
+    }
+
+    main .p-dos {
+        grid-area: p-dos;
+    }
+
+    main .botones {
+        grid-area: botones;
+    }
+
+    section {
+        flex-direction: row;
+    }
+    
+}
